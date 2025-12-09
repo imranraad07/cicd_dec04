@@ -1,0 +1,13 @@
+# Environment
+.python-version
+env
+
+# Cache
+.mypy_cache
+.pytest_cache
+__pycache__
+
+# Testing
+coverage.xml
+htmlcov
+.coverage
