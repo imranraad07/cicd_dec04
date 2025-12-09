@@ -16,11 +16,6 @@ jobs:
       steps:
         - name: Checkout repository
           uses: actions/checkout@v4
-
-        - name: Download artifact
-          uses: actions/download-artifact@v4
-          with:
-            name: github-pages  # The name of the artifact you uploaded in Workflow 
             
         - name: deploy the artifacts
           uses: actions/deploy-pages@v4
