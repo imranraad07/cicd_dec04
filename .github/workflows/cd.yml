@@ -19,7 +19,7 @@ jobs:
           with:
             name: github-pages
             path: ./sites
-            github-token: ${{ github.token }}
+            github-token: ${{ secrets.GH_PAT }}
 
         - name: deploy the artifacts
           uses: actions/deploy-pages@v4
