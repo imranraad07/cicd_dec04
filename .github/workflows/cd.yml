@@ -9,7 +9,7 @@ jobs:
   Deploy:
       runs-on: ubuntu-latest
       permissions:
-        pages: read, write
+        pages: read
         id-token: write
         
       steps:
