@@ -93,7 +93,3 @@ def test_sqrt():
     assert sqrt(-2.3) == complex(0,temp)
 
     assert sqrt(4) == 2
-
-#This is some text
-#wow so cool
-#please push to github you dumb program
