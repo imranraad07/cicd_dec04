@@ -19,20 +19,17 @@ def test_add1():
 def test_add2():
     assert add(5, 6) != 10
 
-
 def test_sub1():
     assert sub(10, 4) == 6
 
 def test_sub2():
     assert sub(-5, 3) == -8
 
-
 def test_mult1():
     assert mult(3, 4) == 12
 
 def test_mult2():
     assert mult(0, 99) == 0
-
 
 def test_div1():
     assert div(10, 2) == 5
@@ -43,11 +40,6 @@ def test_div2():
 def test_div3():
     with pytest.raises(ValueError):
         div(5, 0)
-
-
-# -------------------
-# ADVANCED OPERATIONS
-# -------------------
 
 def test_log1():
     assert log(10, 100) == 2
@@ -67,7 +59,6 @@ def test_log5():
     with pytest.raises(ValueError):
         log(1, 10)
 
-
 def test_square1():
     assert square(5) == 25
 
@@ -78,10 +69,8 @@ def test_square2():
 def test_sin1():
     assert sin(0) == 0
 
-
 def test_cos1():
     assert cos(0) == 1
-
 
 def test_sqrt1():
     assert sqrt(9) == 3
@@ -92,7 +81,6 @@ def test_sqrt2():
 def test_sqrt3():
     with pytest.raises(ValueError):
         sqrt(-1)
-
 
 def test_percent1():
     assert percent(0.25) == 25
