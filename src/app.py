@@ -25,7 +25,7 @@ def division(a, b):
     try:
         return a / b
     except ZeroDivisionError as e:
-        print(f"You tried to divide by zero:")
+        return 0
 
 def square(a):
     if not is_number(a):
