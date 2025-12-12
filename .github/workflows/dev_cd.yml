@@ -1,0 +1,16 @@
+name: CD
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: deploy the artifacts
+        uses: actions/deploy-pages@v4
