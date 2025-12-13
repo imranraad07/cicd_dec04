@@ -14,25 +14,18 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Prepare the webpage
+        run: |
+          mkdir sites
+          mv htmlcov sites/
+          mv coverage.xml sites/
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: upload the artifacts
+        uses: actions/upload-pages-artifact@v4
         with:
-          python-version: "3.10"
+          path: ./sites
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      - name: Run basic tests
-        run: pytest -q
-
-      - name: Run tests with coverage
-        run: |
-          pytest -q \
-            --cov=. \
-            --cov-report=term \
-            --cov-report=xml \
-            --cov-report=html \
+      - name: deploy the artifacts
+        uses: actions/deploy-pages@v4
+    
+    
