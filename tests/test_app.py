@@ -7,19 +7,22 @@ sys.path.insert(0, str(root / "src"))
 
 from app import add
 
-def test_add_11():
+def test_add_pos_pos():
     assert add(5, 6) == 11
 
-def test_add_11():
-    assert add(5, 6) != 10
+def test_add_neg_pos():
+    assert add(-8, 3) == -5
+
+def test_add_neg_neg():
+    assert add(-4, -5) == -9
 
 def test_add_double_nan():
-    assert add(float("nan"), float("nan")) == float("nan")
+    assert math.isnan(add(float("nan"), float("nan")))
 
 def test_add_nan():
     for i in range(-100, 100):
-        assert add(i, float("nan")) == float("nan")
-        assert add(float("nan"), i) == float("nan")
+        assert math.isnan(add(i, float("nan")))
+        assert math.isnan(add(float("nan"), i))
 
 def test_add_inverse():
     for i in range(-100, 100):
