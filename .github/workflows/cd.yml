@@ -1,4 +1,4 @@
-name: CI
+name: CD
 
 on:
   push:
@@ -56,5 +56,4 @@ jobs:
     steps:
       - name: deploy the artifacts
         uses: actions/deploy-pages@v4
-    
-    
+
