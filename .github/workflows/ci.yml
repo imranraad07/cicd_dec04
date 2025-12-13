@@ -26,10 +26,10 @@ jobs:
       - name: Run tests with coverage
         run: |
           pytest -q \
-            --cov=.
+            --cov=. \
             --cov-report=term \
             --cov-report=xml \
-            --cov-report=html \
+            --cov-report=html
 
       - name: Prepare the webpage
         run: |
