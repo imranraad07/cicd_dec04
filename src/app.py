@@ -65,6 +65,3 @@ def log(base, x):
     if x < 0 or base <= 0:
         raise Exception("Base and x cannot be negative")
     return math.log(x, base)
-
-if __name__ == "__main__":
-    print(add("5.1", 1.9))
