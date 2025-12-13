@@ -2,7 +2,7 @@ name: CD (deploy coverage to Pages)
 
 on:
   pull_request:
-    branches: [main, master]
+    branches: [master]
     types: [closed]
 
 permissions:
@@ -17,6 +17,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
